@@ -1,0 +1,192 @@
+GraphRAG Evaluation Report
+Similarity quality and retrieval metrics
+
+Re-run Evaluation
+Overview
+Similarity
+Explainability
+Charts
+✔ Strong System
+
+ℹ Mean hybrid (0.291) < baseline (0.556): expected — 20 cross-domain pairs floored to 0.05 (suppressed intentionally). Same-domain pairs improved by +0.0924 (+11.5%). Compare same-domain scores, not overall mean.
+Same-domain boost: +0.0924 (+11.5% rel) ✔
+20 cross-domain pairs suppressed (floor=0.05)
+Graph signal: 25% (7 hybrid + 0 weak + 0 partial) ✔
+Mean boost on boosted pairs: +0.0924
+nDCG@5: 1.0000 MRR: 1.0000 MAP: 0.7558
+Coverage: 100% ✔
+Precision: 100% ✔
+Entity extraction: 100% ✔
+Graph signal: 100% of top pairs ✔
+similarity
+
+✔ Good
+explainability
+
+✔ Good
+Key Performance Indicators
+Metric	Value	Target	Status
+Mean Hybrid Score
+Same-domain only (cross-domain pairs intentionally suppressed)
+0.8939	0.700	✔
+Mean Baseline Score	0.8014	—	—
+Absolute Improvement (pp)	0.0924 ✔	0.001	✔
+Relative Improvement (%)	11.53%	0.100	✔
+Graph Signal Coverage	25.0%	0.250	✔
+nDCG@5	1.0000	0.500	✔
+MRR	1.0000	0.500	✔
+MAP	0.7558	0.500	✔
+Entity Coverage	100.0%	0.600	✔
+Explanation Coverage	100.0%	0.700	✔
+Explanation Precision	100.0%	0.850	✔
+
+
+
+imilarity Scoring
+✔ Good
+Score Comparison
+
+Mean Hybrid Score
+0.8939
+Same-domain pairs only
+
+Mean Baseline (cosine)
+0.8014
+Same-domain pairs only
+
+Absolute improvement
+0.0924
+✔
+Relative improvement
+11.53%
+✔
+Mean entity boost
+0.0924
+ℹ mean_hybrid is lower than mean_baseline because cross-domain pairs are intentionally suppressed to 0.05. Use same_domain_mean_hybrid vs same_domain_mean_baseline for a fair comparison.
+Graph Signal
+
+Strong hybrid pairs
+25.0%
+✔
+Weak graph pairs
+0.0%
+Total graph coverage
+25.0%
+✔
+Total pairs evaluated
+28.0000
+Retrieval Quality Metrics
+Precision / Ranking
+
+P@1
+1.0000
+✔
+P@3
+1.0000
+✔
+P@5
+1.0000
+✔
+MRR (Mean Reciprocal Rank)
+1.0000
+✔
+MAP (Mean Avg Precision)
+0.7558
+✔
+nDCG (Discounted Gain)
+
+nDCG@3
+1.0000
+✔
+nDCG@5
+1.0000
+✔
+nDCG@10
+0.8701
+✔
+nDCG rewards placing highly relevant pairs at the top of the ranking. A score of 1.0 means perfect ordering.
+
+Top Similar Pairs
+Retrieval-Augmented Generation for Large ↔ A Survey of Graph Retrieval-Augmented Ge
+0.9986
++0.0678
+hybrid
+Graph boost +6.8pp via shared method(s): fine-tuning, rag; shared topic(s): knowledge integration, named entity recognition, question answering (40% Jaccard) over cosine 93%. Highly similar. [mode=hybrid]
+
+A Survey of Graph Retrieval-Augmented Ge ↔ From Local to Global: A GraphRAG Approac
+0.9889
++0.1031
+hybrid
+Graph boost +10.3pp via shared method(s): rag; shared topic(s): information retrieval, question answering (14% Jaccard) over cosine 89%. Highly similar. [mode=hybrid]
+
+Retrieval-Augmented Generation for Large ↔ From Local to Global: A GraphRAG Approac
+0.9815
++0.1394
+hybrid
+Graph boost +13.9pp via shared method(s): rag; shared topic(s): question answering (16% Jaccard) over cosine 84%. Highly similar. [mode=hybrid]
+
+The Health Effects of Chocolate and Coco ↔ Consumption of 85% cocoa dark chocolate
+0.8894
++0.0417
+embedding_only
+Graph boost +4.2pp via semantic confidence bonus (+0.08) (0% Jaccard) over cosine 85%. Highly similar. [mode=embedding only]
+
+Large Multimodal Models: Notes on CVPR 2 ↔ A Survey of Graph Retrieval-Augmented Ge
+0.8705
++0.1660
+hybrid
+Graph boost +16.6pp via shared method(s): in-context learning (12% Jaccard) over cosine 70%. Highly similar. [mode=hybrid]
+
+
+
+
+Explainability Metrics
+✔ Good
+Explanation Quality
+
+Explanation coverage
+1.0000
+✔
+Explanation precision
+1.0000
+✔
+Interpretability advantage
+1.0000
+✔
+High-scoring pairs examined
+2.0000
+Entity Health
+
+Entity extraction rate
+1.0000
+✔
+Graph signal rate (top pairs)
+1.0000
+✔
+Example Explanations
+a75a0f77… ↔ 562f06b6…
+0.9986
+hybrid
+Graph boost +6.8pp via shared method(s): fine-tuning, rag; shared topic(s): knowledge integration, named entity recognition, question answering (40% Jaccard) over cosine 93%. Highly similar. [mode=hybrid]
+
+fine-tuning
+knowledge integration
+llm
+named entity recognition
+question answering
+562f06b6… ↔ c8c0a9de…
+0.9889
+hybrid
+Graph boost +10.3pp via shared method(s): rag; shared topic(s): information retrieval, question answering (14% Jaccard) over cosine 89%. Highly similar. [mode=hybrid]
+
+gpt
+in-context learning
+information retrieval
+llama
+llm
+
+
+
+
+
+

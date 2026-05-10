@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+venv/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+
+# Uploads (user data)
+backend/uploads/
+
+# Node
+node_modules/
+.next/
+out/
+*.log
+npm-debug.log*
+
+# Env files (keep .env.example but not .env)
+frontend/.env.local
+backend/.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
